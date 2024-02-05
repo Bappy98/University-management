@@ -1,9 +1,9 @@
 import React from 'react'
-import { banner, banner1, img1 } from '../../assets/photo'
+import { img1 } from '../../assets/photo'
 
-function ActivityItem() {
+function SingleNews() {
   return (
-  <div className='min-h-[400px] max-w-[600px] bg-slate-200 '>
+    <div className='min-h-[400px] max-w-[600px] bg-slate-200'>
     <img src={img1} alt="" className='h-[350px] w-full' />
     <div className='m-2 p-2'>
       <p>date:</p>
@@ -15,4 +15,4 @@ function ActivityItem() {
   )
 }
 
-export default ActivityItem
+export default SingleNews
