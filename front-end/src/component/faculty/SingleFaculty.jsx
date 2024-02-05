@@ -3,7 +3,7 @@ import { banner1 } from '../../assets/photo'
 
 function SingleFaculty() {
   return (
-    <div className='h-[400px] w-[400px] relative  cursor-pointer group z-50 overflow-hidden'>
+    <div className='h-[400px] w-[400px] relative  cursor-pointer group z-40 overflow-hidden'>
     <div className='group-hover:opacity-80'>
     <img src={banner1} alt="" className=' h-full w-full' />
     </div>

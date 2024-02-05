@@ -8,7 +8,7 @@ function Teachers() {
         <div className='mb-24'>
             <Title>TEACHER</Title>
         </div>
-        <div className=' grid xl:grid-cols-3 md:grid-cols-2 justify-items-center gap-6 '>
+        <div className=' flex justify-center flex-wrap gap-16 justify-items-center lg:mx-16 mx-2 '>
         <TeacherCard/>
         <TeacherCard/>
         <TeacherCard/>

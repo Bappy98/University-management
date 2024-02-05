@@ -3,7 +3,7 @@ import { banner1 } from '../../assets/photo'
 
 function SpeechByPrincipal() {
   return (
-    <div className='grid lg:grid-cols-2 m-12 gap-10 '>
+    <div className='grid lg:grid-cols-2 m-12 gap-16 py-16 '>
         <div className='flex  justify-center lg:justify-end'>
             <img src={banner1} alt="" className='justify-end items-end ' />
         </div>

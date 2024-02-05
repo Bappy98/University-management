@@ -4,10 +4,10 @@ import Title from './../../util/tilte/Title'
 function FacultyNews() {
   return (
    <div>
-    <div className='mb-16'>
+    <div className='py-16'>
       <Title>FACULTY NEWS</Title>
     </div>
-    <div className='grid xl:grid-cols-2 gap-6 justify-items-center'>
+    <div className='flex flex-wrap justify-center lg:mx-4 mx-2 gap-16 justify-items-center'>
         <SingleNews/>
         <SingleNews/>
         <SingleNews/>

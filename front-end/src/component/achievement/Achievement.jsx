@@ -5,7 +5,7 @@ import Title from '../../util/Tilte/Title'
 function Achievement() {
   return (
     <div>
-        <div className='mb-16'>
+        <div className='py-16'>
             <Title>ACHIEVEMENT</Title>
         </div>
         <div className='grid gap-6 grid-cols-2 justify-items-center'>

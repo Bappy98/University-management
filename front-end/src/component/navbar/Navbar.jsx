@@ -1,36 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
+import Sidebar from './Sidebar';
+
 
 function Navbar() {
+  const [open,setOpen]=useState(false)
+  const hanleNavButton=()=>{
+    setOpen(!open)
+    console.log("click")
+
+  }
   return (
-    <div className="navbar bg-base-50 sticky top-0 left-0 z-50">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+    <div className="">
+   <div>
+   <Sidebar hanleNavButto={hanleNavButton} open={open} />
+   </div>
+      <div className=" bg-gradient-to-r from-gray-600 via-blue-100 to-blue-300  h-24 z-40 px-4 w-full">
+        {/* sidebar icon */}
+        <div className="flex justify-between items-center relative   z-40 py-8">
+        <div className={`w-[3.2rem] flex justify-center  items-center fixed ${open?'block':'hidden'} text-white p-2 bg-gradient-to-r from-pink-900 via-pink-700 to-pink-500 rounded-full` }>
+          <AiOutlineMenu size={30} onClick={hanleNavButton} />
+        </div>
+          {/* university logo */}
+          <div>
+
+          </div>
+          <div className=''>
+
+     <h2 className='uppercase text-blue px-3 lg:block hidden'>cbst</h2>
+          </div>
+          {/* social icon */}
+          <div className='flex justify-center items-center text-white'>
+          <h2 className='uppercase text-blue px-3 lg:hidden block'>cbst</h2>
+           <div className=' lg:block hidden'>
+         <div className='flex justify-center items-center text-black'>
+         <FaFacebook size={30} style={{ marginRight: '10px' }} />
+            <FaTwitter size={30} style={{ marginRight: '10px' }} />
+            <FaInstagram size={30} />
+         </div>
+           </div>
+          </div>
+        </div>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
-      </ul>
     </div>
-  </div>
-  <div className="navbar-center">
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-end">
-    <button className="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </button>
-    <button className="btn btn-ghost btn-circle">
-      <div className="indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-        <span className="badge badge-xs badge-primary indicator-item"></span>
-      </div>
-    </button>
-  </div>
-</div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

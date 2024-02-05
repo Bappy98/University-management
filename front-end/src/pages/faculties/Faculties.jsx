@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../util/Tilte/Title'
 import SpeechByPrincipal from '../../component/speechByPrincipal/SpeechByPrincipal'
 import Teachers from '../../component/teacher/Teachers'
@@ -7,7 +6,7 @@ import Achievement from '../../component/achievement/Achievement'
 
 function Faculties() {
   return (
-    <div className='bg-slate-400'>
+    <div className='bg-slate-400 py-16'>
         <Title>Cse</Title>
         <SpeechByPrincipal/>
         <Teachers/>
